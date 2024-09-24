@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import Hero from "../components/Hero";
 import Navbar from "@/components/Navbar";
+import Menu from "@/components/Menu";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,9 @@ export default function Home() {
         <p>Loading</p>
       ) : (
         <main className="flex flex-col bg-black text-white">
-          <Navbar />
+          <Navbar>
+            <Menu />
+          </Navbar>
           <Hero />
         </main>
       )}

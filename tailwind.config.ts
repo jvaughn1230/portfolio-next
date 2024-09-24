@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         blue: {
-          500: "#3b82f6", // Primary blue
-          600: "#2563eb", // Darker blue
-          700: "#1d4ed8", // Even darker blue
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
         },
         gray: {
           light: {
@@ -29,7 +29,6 @@ const config: Config = {
             5: "#120e16",
           },
         },
-        // TODO: Figure this out, not accepting string
         fontFamily: {
           sans: "var(--font-calibre)",
           mono: "var(--font-jetbrains-mono)",

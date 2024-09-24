@@ -1,0 +1,108 @@
+.outer-menu .checkbox-toggle {
+  z-index: 2;
+}
+
+.outer-menu .checkbox-toggle:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.outer-menu .checkbox-toggle:checked + .hamburger > div:before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.outer-menu .checkbox-toggle:checked ~ .menu {
+  pointer-events: auto;
+  visibility: visible !important;
+}
+
+.outer-menu .checkbox-toggle:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.outer-menu .checkbox-toggle:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Hamburger menu styles */
+.outer-menu .hamburger {
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.outer-menu .hamburger > div {
+  height: 0.125rem;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.outer-menu .hamburger > div:before,
+.outer-menu .hamburger > div:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -0.5rem;
+  height: 0.125rem;
+  background: inherit;
+  transition: all 0.4s ease;
+}
+
+.outer-menu .hamburger > div:after {
+  top: 0.5rem;
+}
+
+/* Menu styles */
+.menu {
+  backface-visibility: hidden;
+  outline: 0.0625rem solid transparent;
+}
+
+.menu > div {
+  width: 240vw;
+  height: 240vw;
+  transform: scale(0);
+  will-change: transform;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  backface-visibility: hidden;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.menu > div > div {
+  max-width: 90vw;
+  transition: opacity 0.4s ease;
+}
+
+.menu ul li a {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 50%,
+    #3b82f6 51%,
+    #1d4ed8 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu ul li a:hover {
+  background-position: 100% 0;
+}
