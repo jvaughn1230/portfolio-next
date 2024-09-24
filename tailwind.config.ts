@@ -9,8 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        blue: {
+          500: "#3b82f6", // Primary blue
+          600: "#2563eb", // Darker blue
+          700: "#1d4ed8", // Even darker blue
+        },
+        gray: {
+          light: {
+            1: "#f0f0f0",
+            2: "#dbdbdb",
+            3: "#aaaaaa",
+            4: "#8a8a8a",
+          },
+          dark: {
+            1: "#323133",
+            2: "#242225",
+            3: "#1e1b20",
+            4: "#1a171e",
+            5: "#120e16",
+          },
+        },
+        // TODO: Figure this out, not accepting string
+        fontFamily: {
+          sans: "var(--font-calibre)",
+          mono: "var(--font-jetbrains-mono)",
+        },
+      },
+      backgroundImage: {
+        "custom-gradient":
+          'linear-gradient(120deg, transparent 0%, transparent 50%, theme("colors.blue.500") 50%)',
       },
     },
   },

@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@keyframes fadeAppear {
+  0% {
+    opacity: 0;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes growHorizontal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 98%;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.intro {
+  animation: fadeAppear 1s 0.2s ease-in-out;
+}
+
+.heroName {
+  line-height: 1.5em;
+  animation: fadeAppear 1.3s 0.3s ease-in-out;
+}
+
+.heroName .emphasize::after {
+  content: "";
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(to right, #4fa9ff, #0054cc);
+  box-shadow: 0 0 1rem #0054cc;
+  animation: growHorizontal 1.3s cubic-bezier(0.9, 0, 0.5, 0.9) 0.8s;
 }
