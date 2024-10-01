@@ -6,6 +6,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Hero from "../components/Hero";
 import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
+import Skills from "@/components/Skills";
+import Contact from "@/components/contact/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +35,8 @@ export default function Home() {
             <Menu />
           </Navbar>
           <Hero />
+          <Skills />
+          <Contact />
         </main>
       )}
     </>
