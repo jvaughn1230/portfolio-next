@@ -1,0 +1,79 @@
+.contact-section {
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  user-select: none;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f0f0f0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2px solid #2563eb;
+  background: transparent;
+  color: white;
+  outline: none;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input {
+  height: 3rem;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0.3rem #1d4ed8;
+}
+
+textarea {
+  min-height: 15rem;
+  max-height: 20rem;
+  height: auto;
+}
+
+input:active,
+textarea:active {
+  box-shadow: 0 0 0.3rem #1d4ed8;
+}
+
+label {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: white;
+  pointer-events: none;
+  transition: transform 0.3s ease, top 0.3s ease, font-size 0.3s ease-in-out;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+textarea.filled + label {
+  transform: translateY(-1.5rem);
+  top: -0.5rem;
+  font-size: 0.85rem;
+}
