@@ -1,0 +1,7 @@
+.tippy-box[data-theme~="gradient"] {
+  background: linear-gradient(to right, #4fa9ff, #0054cc);
+}
+
+.tippy-box[data-theme~="gradient"] .tippy-arrow {
+  color: #0054cc;
+}
