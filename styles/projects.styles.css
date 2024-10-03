@@ -1,0 +1,25 @@
+.project-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.project-card img {
+  object-fit: cover;
+  transform: rotate(-22.5deg) translateZ(2rem);
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  width: 17rem !important;
+  transform: rotate(-22.5deg);
+  height: auto !important;
+  min-width: auto !important;
+  max-height: auto !important;
+  object-fit: contain !important;
+  right: 2rem !important;
+  bottom: auto !important;
+  left: auto !important;
+}
